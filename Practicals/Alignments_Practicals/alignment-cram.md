@@ -442,8 +442,10 @@ However because of the restraits of our VMs, today we're going to use one of the
 I generally use this alot for a quick look, and it can be a really handy way of initially visualising reads.
 
 Using the reference sequence that was included in the data downloaded today, lets use the `samtools tview` subcommand:
+(The tview command needs an index of the cram file to enable fast searches so lets index the cram first.)
 
 ```
+samtools index SRR3096662_Aligned.out.sort.cram
 samtools tview SRR3096662_Aligned.out.sort.cram --reference hg19_1000g_hs37d5.fasta.gz
 ```
 
